@@ -17,7 +17,7 @@ wututu 个人品牌与作品集项目。包含 React 作品集应用和 Claude C
 | `portfolio/` | React + TypeScript + Vite 作品集应用 |
 | `.claude/skills/` | Claude Code 技能（frontend-design, mcp-builder, pdf, pptx, skill-creator, wututu-watermark） |
 | `CLAUDE.md` | 本文件 |
-| `吴卫哲-面试简历.pdf` | 个人简历 PDF |
+| `wututu-简历.pdf` | 个人简历 PDF |
 
 ## Portfolio 应用（React + TypeScript + Vite）
 

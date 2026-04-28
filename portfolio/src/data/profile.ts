@@ -1,10 +1,10 @@
 import type { ProfileData } from '../types'
 
 export const profileData: ProfileData = {
-  name: '吴卫哲',
+  name: 'wututu',
   alias: 'wututu',
   email: '3225332818@qq.com',
-  phone: '13173561855',
+  phone: '13173******',
   github: 'https://github.com/wzw06738-afk',
   education: {
     school: '211 院校',
