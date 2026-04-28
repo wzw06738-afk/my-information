@@ -1,0 +1,73 @@
+import type { ProfileData } from '../types'
+
+export const profileData: ProfileData = {
+  name: '吴卫哲',
+  alias: 'wututu',
+  email: '3225332818@qq.com',
+  phone: '13173561855',
+  github: 'https://github.com/wzw06738-afk',
+  education: {
+    school: '211 院校',
+    major: '计算机科学与技术',
+    period: '2023.09 ~ 2027.08',
+    gpa: 'B',
+  },
+  bio: '一个热衷于把想法变成现实的人。相信好的设计不只是好看——它应该让人感受到某种东西。每一个像素、每一行代码，都是一次微小的表达。目前在技术与美学的交界处寻找属于自己的语言，永远在学习，永远在构建。',
+  skills: [
+    { id: 1, name: 'React', category: '前端框架', description: '组件化开发，状态管理，Hooks 生态' },
+    { id: 2, name: 'TypeScript', category: '编程语言', description: '类型安全，泛型编程，工程化实践' },
+    { id: 3, name: 'Next.js', category: '全栈框架', description: 'SSR/SSG，性能优化，LCP 提升 65%' },
+    { id: 4, name: 'Node.js', category: '后端', description: 'NestJS，RESTful API，中间件设计' },
+    { id: 5, name: 'HTML/CSS', category: '前端基础', description: '语义化标签，CSS Modules，响应式布局' },
+    { id: 6, name: 'JavaScript', category: '编程语言', description: 'ES6+，异步编程，DOM 操作' },
+    { id: 7, name: 'MongoDB', category: '数据库', description: '数据建模，聚合查询，Mongoose' },
+    { id: 8, name: 'AI Agent', category: '前沿技术', description: 'MCP 协议，Agent 编排，Skills 开发' },
+    { id: 9, name: 'Webpack/Vite', category: '构建工具', description: '模块打包，开发服务器，构建优化' },
+    { id: 10, name: 'Git', category: '工具', description: '版本控制，协作工作流，代码管理' },
+    { id: 11, name: 'HTTP/TCP/IP', category: '网络协议', description: '网络通信原理，协议分析，调试' },
+    { id: 12, name: 'Axios', category: '工具库', description: '请求封装，拦截器，错误处理' },
+  ],
+  projects: [
+    {
+      id: 1,
+      title: 'CAi Agent',
+      subtitle: '全栈 AI Agent 平台',
+      techStack: ['Next.js', 'React 18', 'TypeScript', 'NestJS', 'MongoDB', 'Redux Toolkit'],
+      description: '一个面向 AI 代理的全栈管理平台，支持 Skills 管理与 MCP Agent 集成。用户可以通过平台创建、配置和监控 AI Agent 的执行。',
+      highlights: [
+        '使用 Redux Toolkit 管理全局状态，替代 props 层层传递，组件通信效率提升',
+        '封装 QuestionRadio 等通用组件，实现代码复用',
+        'Next.js 性能优化：LCP 从 2.6s 降至 0.9s，提升 65%',
+        '服务端采用 NestJS + MongoDB，实现 JWT 认证',
+        '500+ 注册用户，80% 月留存率',
+        '集成 AI Agent Skills 与 MCP 协议，支持 Agent 编排',
+      ],
+    },
+    {
+      id: 2,
+      title: 'TypeScript Axios 封装',
+      subtitle: '类型安全的 API 请求库',
+      techStack: ['TypeScript', 'Axios'],
+      description: '基于 Axios 的二次封装，提供类型安全的 API 请求能力，统一错误处理和请求拦截。',
+      highlights: [
+        '完整的 TypeScript 类型定义，请求/响应类型推导',
+        '统一拦截器机制：请求拦截、响应拦截、错误处理',
+        '封装通用的 HTTP 方法（GET/POST/PUT/DELETE）',
+        '全局 Loading 状态管理与请求取消',
+      ],
+    },
+    {
+      id: 3,
+      title: 'XMLHttpRequest 手写封装',
+      subtitle: '原生 HTTP 请求库',
+      techStack: ['TypeScript', 'XMLHttpRequest'],
+      description: '不依赖第三方库，基于原生 XMLHttpRequest 的手写 HTTP 请求库，深入理解网络请求底层原理。',
+      highlights: [
+        '原生 XMLHttpRequest 的 TypeScript 封装',
+        'Promise 化异步请求处理',
+        'CancelToken 实现手动取消请求',
+        'HTTP 状态码统一处理（2xx 成功/4xx 客户端错误/5xx 服务端错误）',
+      ],
+    },
+  ],
+}

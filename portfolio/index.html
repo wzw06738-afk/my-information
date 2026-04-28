@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👤</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>吴卫哲 | wututu — 个人简介</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+    <style>
+      /* ── CSS Reset ── */
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        min-height: 100vh;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+      ul { list-style: none; }
+      a { text-decoration: none; color: inherit; }
+      button { cursor: pointer; font-family: inherit; }
+
+      /* ── Light Theme (default) ── */
+      :root {
+        --bg: #f5f0e8;
+        --text: #1a1410;
+        --text-secondary: #3a3430;
+        --accent: #c8502a;
+        --muted: #8a7f72;
+        --border: #d4cdc2;
+        --card-bg: #ffffff;
+        --nav-bg: rgba(245, 240, 232, 0.85);
+        --hover-bg: rgba(200, 80, 42, 0.08);
+        --shadow: rgba(26, 20, 16, 0.08);
+      }
+
+      /* ── Dark Theme ── */
+      [data-theme="dark"] {
+        --bg: #121212;
+        --text: #e8e0d8;
+        --text-secondary: #b8b0a8;
+        --accent: #e07050;
+        --muted: #787068;
+        --border: #2a2826;
+        --card-bg: #1e1e1e;
+        --nav-bg: rgba(18, 18, 18, 0.9);
+        --hover-bg: rgba(224, 112, 80, 0.12);
+        --shadow: rgba(0, 0, 0, 0.3);
+      }
+
+      body { background: var(--bg); color: var(--text); transition: background 0.3s, color 0.3s; }
+
+      /* ── Global Component Styles ── */
+
+      /* Skill Card */
+      .skill-card {
+        position: relative;
+        padding: 1.5rem;
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        overflow: hidden;
+        cursor: default;
+        transition: box-shadow 0.2s;
+      }
+      .skill-card:hover {
+        box-shadow: 0 8px 24px var(--shadow);
+      }
+      .skill-card-glow {
+        position: absolute;
+        inset: 0;
+        opacity: 0.1;
+        pointer-events: none;
+        transition: opacity 0.2s;
+      }
+      .skill-card:hover .skill-card-glow {
+        opacity: 0.18;
+      }
+      .skill-card-category {
+        font-size: 0.6rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 0.5rem;
+        display: block;
+      }
+      .skill-card-name {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text);
+        margin-bottom: 0.4rem;
+      }
+      .skill-card-desc {
+        font-size: 0.75rem;
+        line-height: 1.6;
+        color: var(--muted);
+      }
+
+      /* Project Card */
+      .project-card {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 1.5rem 1.75rem;
+        transition: box-shadow 0.2s;
+      }
+      .project-card:hover {
+        box-shadow: 0 8px 24px var(--shadow);
+      }
+      .project-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+      .project-card-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--text);
+      }
+      .project-card-subtitle {
+        font-size: 0.8rem;
+        color: var(--muted);
+        margin-top: 0.15rem;
+      }
+      .project-card-toggle {
+        flex-shrink: 0;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: 1px solid var(--border);
+        background: transparent;
+        color: var(--text);
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s, border-color 0.2s;
+      }
+      .project-card-toggle:hover {
+        background: var(--hover-bg);
+        border-color: var(--accent);
+      }
+      .project-card-tech {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        margin-top: 0.75rem;
+      }
+      .project-card-tech-tag {
+        font-size: 0.6rem;
+        letter-spacing: 0.05em;
+        padding: 0.2rem 0.6rem;
+        border-radius: 4px;
+        background: var(--hover-bg);
+        color: var(--accent);
+      }
+      .project-card-desc {
+        font-size: 0.85rem;
+        line-height: 1.7;
+        color: var(--text-secondary);
+        margin-top: 0.75rem;
+      }
+      .project-card-details {
+        margin-top: 0;
+      }
+      .project-card-highlights {
+        margin-top: 0.75rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+      .project-card-highlights li {
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+        padding-left: 1rem;
+        position: relative;
+        line-height: 1.6;
+      }
+      .project-card-highlights li::before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+      }
+
+      @media (max-width: 640px) {
+        .project-card { padding: 1.25rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
